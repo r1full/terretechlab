@@ -1,0 +1,347 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #292929;
+    width:100%;
+}
+
+/* トップページのヘッダー */
+.topHeader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+
+    background: linear-gradient(to bottom right, #5f5f5f, #101010);
+
+}
+
+.topHeader .logo {
+    width: 15%;
+    height: 15%;
+    margin: auto;
+    padding-top: 5%;
+}
+
+.topHeader .title {
+    font-family: "Cal Sans", sans-serif;
+    color: #f5f5f5;
+    font-size: 2.5rem;
+    margin: auto;
+    padding: 10px 0px 8% 0px;
+}
+
+.topHeader .link {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.topHeader .link a {
+    position: relative;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0px 30px;
+}
+
+.topHeader .link a::before {
+    position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  content: "";
+  background-color: #f5f5f5;
+  mix-blend-mode: difference;
+  transition: 0.5s;
+}
+
+.topHeader .link a:hover::before {
+  width: 100%;
+}
+
+/* トップページのメインコンテンツ */
+.topPageContent {
+    width: 100%;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+/* 1 */
+
+.topPageContent .container:nth-child(1) {
+    width: 100%;
+    background-color: #f5f5f5;
+
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.topPageContent .container:nth-child(1)::before {
+    content: "集";
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-20%, -50%);
+    font-size: 500px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: -1;
+}
+
+.topPageContent .container:nth-child(1) .contentTitle {
+    width: 80%;
+    margin: auto;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #292929;
+    margin-bottom: 0.3em;
+    position: relative;
+}
+
+.topPageContent .container:nth-child(1) .contentTitle::after {
+    content: "";
+    background-size: 10px 10px;
+    background-color: #292929;
+    background-image: repeating-linear-gradient(-45deg, #4DA69A 0, #4DA69A 3px, #f5f5f5 0, #f5f5f5 50%);
+    width: 100%;
+    height: 7px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.topPageContent .container:nth-child(1) .contentText {
+    width: 78%;
+    margin: auto;
+    font-size: 1.2rem;
+    color: #3f3f3f;
+    line-height: 1.8;
+
+}
+
+/* 2 */
+
+.topPageContent .container:nth-child(2) {
+    width: 100%;
+    background-color: #292929;
+
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.topPageContent .container:nth-child(2)::before {
+    content: "多";
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-80%, -50%);
+    font-size: 500px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: -1;
+}
+
+.topPageContent .container:nth-child(2) .contentTitle {
+    width: 80%;
+    margin: auto;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    margin-bottom: 0.3em;
+    position: relative;
+}
+
+.topPageContent .container:nth-child(2) .contentTitle::after {
+    content: "";
+    background-size: 10px 10px;
+    background-color: #f5f5f5;
+    background-image: repeating-linear-gradient(-45deg, #4DA69A 0, #4DA69A 3px, #292929 0, #292929 50%);
+    width: 100%;
+    height: 7px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.topPageContent .container:nth-child(2) .contentText {
+    width: 78%;
+    margin: auto;
+    font-size: 1.2rem;
+    color: #cacaca;
+    line-height: 1.8;
+
+}
+
+/* 3 */
+
+.topPageContent .container:nth-child(3) {
+    width: 100%;
+    background-color: #f5f5f5;
+
+    position: relative;
+    padding: 20px 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.topPageContent .container:nth-child(3)::before {
+    content: "尽";
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-20%, -50%);
+    font-size: 500px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: -1;
+}
+
+.topPageContent .container:nth-child(3) .contentTitle {
+    width: 80%;
+    margin: auto;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #292929;
+    margin-bottom: 0.3em;
+    position: relative;
+}
+
+.topPageContent .container:nth-child(3) .contentTitle::after {
+    content: "";
+    background-size: 10px 10px;
+    background-color: #292929;
+    background-image: repeating-linear-gradient(-45deg, #4DA69A 0, #4DA69A 3px, #f5f5f5 0, #f5f5f5 50%);
+    width: 100%;
+    height: 7px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.topPageContent .container:nth-child(3) .contentText {
+    width: 78%;
+    margin: auto;
+    font-size: 1.2rem;
+    color: #3f3f3f;
+    line-height: 1.8;
+
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    background: linear-gradient(to bottom right, #5f5f5f, #101010);
+    padding: 30px 0 0 0;
+}
+.footerContent {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px;
+    background-color: #e2e2e2;
+    padding: 10px;
+}
+
+.footerSection {
+    flex-grow: 1; 
+    min-width: 0;
+    padding: 0 15px; 
+}
+
+.footerSection h3 {
+    color: #292929;
+    margin-bottom: 15px;
+    font-family: "cal sans", sans-serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.footerSection h4 {
+    color: #292929;
+    margin-bottom: 10px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.footerSection p {
+    color: #3f3f3f;
+    line-height: 1.6;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 1rem;
+}
+
+.footerSection ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footerSection a {
+font-family: "Zen Kaku Gothic New", sans-serif;
+  padding-bottom: 0px;
+  font-size: 1rem;
+  background-image: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 0 1px;
+  transition: background-size 0.3s;
+  text-decoration: none;
+}
+
+.footerSection a:hover {
+  background-position: bottom left;
+  background-size: 100% 1px;
+}
+
+.footerContent .footerSection:nth-child(1) {
+    flex: 4;
+}
+
+.footerContent .footerSection:nth-child(2) {
+    flex: 3; 
+}
+
+.footerContent .footerSection:nth-child(3) {
+    flex: 3;
+}
+
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column;
+    }
+
+    .footerSection {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
