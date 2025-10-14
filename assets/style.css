@@ -14,34 +14,6 @@ body {
     width:100%;
 }
 
-/* アクセシビリティ */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 100;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
 /* トップページのヘッダー */
 .topHeader {
     width: 100%;
@@ -71,10 +43,6 @@ body {
     padding: 10px 0px 8% 0px;
 }
 
-.topHeader nav {
-    width: 100%;
-}
-
 .topHeader .link {
     font-family: "Zen Kaku Gothic New", sans-serif;
     width: 100%;
@@ -83,13 +51,7 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
-    list-style: none;
 }
-
-.topHeader .link li {
-    display: inline;
-}
-
 .topHeader .link a {
     position: relative;
     text-decoration: none;
@@ -97,7 +59,6 @@ body {
     font-size: 1.2rem;
     margin: 0;
     padding: 0px 30px;
-    display: inline-block;
 }
 
 .topHeader .link a::before {
@@ -192,7 +153,7 @@ body {
 }
 
 .topPageContent .container:nth-child(2)::before {
-    content: "多";
+    content: "自";
     position: absolute;
     top: 50%; 
     left: 50%;
@@ -301,11 +262,19 @@ body {
     background: linear-gradient(to bottom right, #5f5f5f, #101010);
     padding: 30px 0 0 0;
 }
-.footerContent {
+.footerContent:nth-child(1) {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px;
+    background-color: #e2e2e2;
+    padding: 10px;
+}
+
+.footerContent:nth-child(2) {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
     background-color: #e2e2e2;
     padding: 10px;
 }
@@ -337,10 +306,6 @@ body {
     line-height: 1.6;
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-size: 1rem;
-}
-
-.footerSection nav {
-    width: 100%;
 }
 
 .footerSection ul {
@@ -375,6 +340,13 @@ font-family: "Zen Kaku Gothic New", sans-serif;
 
 .footerContent .footerSection:nth-child(3) {
     flex: 3;
+}
+
+.footerNote {
+    color: #f5f5f5;
+    text-align: center;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 0.5em;
 }
 
 @media (max-width: 768px) {
