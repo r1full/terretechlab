@@ -22,22 +22,28 @@
 
 </head>
 <body>
-    <div id="loadingScreen"><div class="loader"></div></div>
-    <div class="topHeader">
-        <img class="logo" src="assets/img/logo_transparent.png" alt="Logo">
-        <p class="title">TerraTech Lab</p>
-        <div class="link">
-            <a href="#aboutTTL">TTLについて</a>
-            <a href="publictech/">公開技術</a>
-            <a href="contact/">お問い合わせ</a>
-            <a href="join/">規約・参加する</a>
-        </div>
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    <div id="loadingScreen" role="status" aria-live="polite" aria-label="読み込み中">
+        <div class="loader"></div>
+        <span class="sr-only">ページを読み込んでいます...</span>
     </div>
-    <div class="topPageContent">
-        <div class="container">
-            <div class="contentTitle" id="aboutTTL">
+    <header class="topHeader">
+        <img class="logo" src="assets/img/logo_transparent.png" alt="TerraTech Lab Logo">
+        <h1 class="title">TerraTech Lab</h1>
+        <nav aria-label="メインナビゲーション">
+            <ul class="link">
+                <li><a href="#aboutTTL">TTLについて</a></li>
+                <li><a href="publictech/">公開技術</a></li>
+                <li><a href="contact/">お問い合わせ</a></li>
+                <li><a href="join/">規約・参加する</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content" class="topPageContent">
+        <section class="container">
+            <h2 class="contentTitle" id="aboutTTL">
                 集合知。
-            </div>
+            </h2>
             <div class="contentText">
                 TTL（TerreaTech Lab）は、テラテッカーで集まって知恵を出し合い、新しい技術やアイデアを生み出すためのコミュニティです。<br>
                 「集合知」を理念、基本方針として掲げ、個々の知識や経験を共有し、協力して問題を解決し、新たな技術を開発することを目指しています。<br>
@@ -45,51 +51,55 @@
                 技術研究への参加はもちろん、引用の為の参加も歓迎しております。参加後でも、研究へ参加するかどうか決めることができます。まずは、気軽に参加してみてください。<br>
                 <a href="join/">参加はこちらから</a>
             </div>
-        </div>
-        <div class="container">
-            <div class="contentTitle">
+        </section>
+        <section class="container">
+            <h2 class="contentTitle">
                 多様性。
-            </div>
+            </h2>
             <div class="contentText">
                 「集合知」という理念、基本方針を掲げ協力して技術開発に励む一方、個々の「多様性」も技術開発において重要な要素となります。<br>
                 個々の多様な視点、経験、知識、感覚によって、全く新しい技術の開発や既存の技術の改良がされることを期待しています。<br>
                 またこの多様性を尊重し、改良が行いやすいよう、サポートや技術自体の理解容易性を重視しています。
             </div>
-        </div>
-        <div class="container">
-            <div class="contentTitle">
+        </section>
+        <section class="container">
+            <h2 class="contentTitle">
                 遊び尽くす。
-            </div>
+            </h2>
             <div class="contentText">
                 正直なところ、TerraTechは2018年発売のゲームであり、アップデート頻度も低く、また同じ開発チームが新しいゲームを開発・リリースしていることもあり、コミュニティ全体が下火になっているのは否めません。<br>
                 しかし、TerreTechは非常に自由度が高く、特に直近のアップデートで追加された回路パーツによってその可能性は大きく広がっています。<br>
                 そこでTerraTechの可能性を最大限に引き出し、遊び尽くすことを目指してTTLを設立しました。<br>
                 まだまだTerraTechは遊び尽くせます。ぜひ一緒に遊び尽くしましょう！
             </div>
-        </div>
-    </div>
-    <div class="footer">
+        </section>
+    </main>
+    <footer class="footer">
         <div class="footerContent">
-            <div class="footerSection">
-                <h3>TerraTech Lab</h3>
+            <section class="footerSection" aria-labelledby="footer-about">
+                <h3 id="footer-about">TerraTech Lab</h3>
                 <p>TerraTechを遊び尽くす。</p>
-            </div>
-            <div class="footerSection">
-                <h4>リンク</h4>
-                <ul>
-                    <li><a href="#aboutTTL">TTLについて</a></li>
-                    <li><a href="publictech/">公開技術</a></li>
-                    <li><a href="contact/">お問い合わせ</a></li>
-                    <li><a href="join/">規約・参加する</a></li>
-                </ul>
-            </div>
-            <div class="footerSection">
-                <h4>コミュニティ・SNS</h4>
-                <ul>
-                    <li><a href="https://discord.com/invite/aXHhcCuaGV" target="_blank" rel="noopener noreferrer">Discord</a></li>
-                </ul>
-            </div>      
+            </section>
+            <section class="footerSection" aria-labelledby="footer-links">
+                <h4 id="footer-links">リンク</h4>
+                <nav aria-label="フッターナビゲーション">
+                    <ul>
+                        <li><a href="#aboutTTL">TTLについて</a></li>
+                        <li><a href="publictech/">公開技術</a></li>
+                        <li><a href="contact/">お問い合わせ</a></li>
+                        <li><a href="join/">規約・参加する</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="footerSection" aria-labelledby="footer-community">
+                <h4 id="footer-community">コミュニティ・SNS</h4>
+                <nav aria-label="ソーシャルメディア">
+                    <ul>
+                        <li><a href="https://discord.com/invite/aXHhcCuaGV" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                    </ul>
+                </nav>
+            </section>
         </div>
-    </div>
+    </footer>
 </body>
 </html>

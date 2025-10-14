@@ -14,6 +14,34 @@ body {
     width:100%;
 }
 
+/* アクセシビリティ */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 /* トップページのヘッダー */
 .topHeader {
     width: 100%;
@@ -43,6 +71,10 @@ body {
     padding: 10px 0px 8% 0px;
 }
 
+.topHeader nav {
+    width: 100%;
+}
+
 .topHeader .link {
     font-family: "Zen Kaku Gothic New", sans-serif;
     width: 100%;
@@ -51,7 +83,13 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
+    list-style: none;
 }
+
+.topHeader .link li {
+    display: inline;
+}
+
 .topHeader .link a {
     position: relative;
     text-decoration: none;
@@ -59,6 +97,7 @@ body {
     font-size: 1.2rem;
     margin: 0;
     padding: 0px 30px;
+    display: inline-block;
 }
 
 .topHeader .link a::before {
@@ -298,6 +337,10 @@ body {
     line-height: 1.6;
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-size: 1rem;
+}
+
+.footerSection nav {
+    width: 100%;
 }
 
 .footerSection ul {

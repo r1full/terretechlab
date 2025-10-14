@@ -22,11 +22,15 @@
     <!-- fonts -->
 </head>
 <body>
-    <div id="loadingScreen"><div class="loader"></div></div>
-    <div class="pre">
-        <img class="logo" src="../assets/img/logo_transparent.png" alt="Logo">
-        <p class="title">このページは準備中です :(</p>
-        <p class="text"><a href="../">トップに戻る</a></p>
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    <div id="loadingScreen" role="status" aria-live="polite" aria-label="読み込み中">
+        <div class="loader"></div>
+        <span class="sr-only">ページを読み込んでいます...</span>
     </div>
+    <main id="main-content" class="pre">
+        <img class="logo" src="../assets/img/logo_transparent.png" alt="TerraTech Lab Logo">
+        <h1 class="title">このページは準備中です :(</h1>
+        <p class="text"><a href="../">トップに戻る</a></p>
+    </main>
 </body>
 </html>
