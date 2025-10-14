@@ -5,5 +5,5 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       loadingScreen.remove();
     }, 1000);
-  }, 2000);
+  }, 500);
 });
