@@ -9,9 +9,37 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/loading.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="text/javascript">
+      function writeHeader(rootDir) {
+          $.ajax({
+              url: "assets/header.html",
+              cache: false,
+              async: false,
+              success: function(html) {
+                  html = html.replace(/\{\$root\}/g, rootDir);
+                  // document.write(html); //
+                  document.getElementById('header-container').innerHTML = html;
+              }
+          });
+      }
+
+      function writeFooter(rootDir) {
+          $.ajax({
+              url: "assets/footer.html",
+              cache: false,
+              async: false,
+              success: function(html) {
+                  html = html.replace(/\{\$root\}/g, rootDir);
+                  // document.write(html); //
+                  document.getElementById('footer-container').innerHTML = html;
+              }
+          });
+      }
+    </script>
 
     <script src="assets/script.js" defer></script>
     <script src="assets/loading.js" defer></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,9 +79,9 @@
             </div>
             <div class="contentText">
                 「自由」もまた重要な理念、基本方針の一つです。<br>
-                10月14日現在、TTLでは回路系パーツを使った情報技術（IT）を主な研究開発内容とする"TerreTech-Information Technology"、略してTTITと呼ばれる分野とその派生が主流です。<br>
+                2025年10月14日現在、TTLでは回路系パーツを使った情報技術（IT）を主な研究開発内容とする"TerreTech-Information Technology"、略してTTITと呼ばれる分野とその派生が主流です。<br>
                 しかし、TTLは「自由」を尊重し、ITに限らず、あらゆる分野の技術研究を歓迎しています。<br>
-                例えば強力な兵器や防御系、デザイン性、またはTerreTechそのものを拡張、または改良する技術にまで、TTLには構想や進行中の研究が多く存在します。<br>
+                例えば強力な兵器や防御系、デザイン性、またはTerreTechそのものを拡張、または改良する技術にまで、TTLには構想や進行中の研究が数多く存在します。<br>
                 TerraTechに関係するのなら、どんな技術でも歓迎します。ぜひ一緒に自由な技術研究をしましょう！
             </div>
         </div>
@@ -69,37 +97,15 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="footerContent">
-            <div class="footerSection">
-                <h3>TerraTech Lab</h3>
-                <p>TerraTechを遊び尽くす。</p>
-            </div>
-            <div class="footerSection">
-                <h4>リンク</h4>
-                <ul>
-                    <li><a href="#aboutTTL">TTLについて</a></li>
-                    <li><a href="publictech/">公開技術</a></li>
-                    <li><a href="contact/">お問い合わせ</a></li>
-                    <li><a href="join/">規約・参加する</a></li>
-                    <li><a href="log/">サイト更新ログ</a></li>
-                </ul>
-            </div>
-            <div class="footerSection">
-                <h4>コミュニティ・SNS</h4>
-                <ul>
-                    <li><a href="https://discord.com/invite/aXHhcCuaGV" target="_blank" rel="noopener noreferrer">Discord</a></li>
-                    <li><a href="d"></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footerContent">
-            <div class="footerSection">
-                <hr>
-                <p class="footerNote">免責事項：このサイトはPCでの閲覧を想定しております。その為、他の端末ではレイアウトが崩れる可能性がございます。ご了承ください。</p>
-                <p class="footerNote">2025 TerraTech Lab, Designed by r1full.</p>
-            </div>
-        </div>
+    <!-- footer -->
+    <noscript>本ページはJavaScriptを使用しております。許可してから再度お越しください。</noscript>
+    <div id="footer-container">
+      <script type="text/javascript">
+        $(document).ready(function() {
+          writeFooter("./");
+        });
+      </script>
     </div>
+    <!-- /footer -->
 </body>
 </html>
